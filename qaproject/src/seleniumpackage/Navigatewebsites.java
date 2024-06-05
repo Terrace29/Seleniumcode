@@ -1,0 +1,48 @@
+package seleniumpackage;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Navigatewebsites {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// 1. setup the property of chromedriver to open google page through chrome web browser.
+		  System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe" );
+		// 2. Initialize Webdriver object through ChromeDriver class.
+	        ChromeDriver browserObject = new ChromeDriver();
+		// 3. Open the http://www.google.com/ link using get method.
+	        browserObject.get("http://www.facebook.com/");
+	        
+	        System.out.println("this is " + browserObject.getTitle() + " website");
+	        		 
+	        System.out.println("url is: " + browserObject.getCurrentUrl());
+	        
+	        browserObject.navigate().to("http://www.instagram.com/");
+	        
+	        System.out.println("this is " + browserObject.getTitle() + " website");
+   		 
+	        System.out.println("url is: " + browserObject.getCurrentUrl());
+	        
+	       
+            browserObject.navigate().to("http://www.twitter.com/");
+	        
+	        System.out.println("this is " + browserObject.getTitle() + " website");
+   		 
+	        System.out.println("url is: " + browserObject.getCurrentUrl());
+	        //browserObject.navigate().back();
+	       // browserObject.navigate().forward();
+	        
+	        
+	       // System.out.println("this is " + browserObject.getTitle() + " website");
+	        //System.out.println("url is: " + browserObject.getCurrentUrl());
+
+	        browserObject.navigate().back();
+	        browserObject.navigate().back();
+	        
+	      //  browserObject.navigate().forward();
+	        
+		
+	}
+
+}
